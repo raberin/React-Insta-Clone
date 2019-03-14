@@ -1,0 +1,53 @@
+.searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  justify-content: space-between;
+}
+
+.leftPart {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+}
+
+.dash {
+  background-color: #262626;
+  height: 28px;
+  margin: 0 16px;
+  width: 1px;
+}
+
+.centerPart {
+  width: 20%;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  outline: 0;
+  padding: 3px 10px 3px 10px;
+  font-size: 1.4rem;
+  height: 2.4rem;
+}
+
+.magnifyGlass {
+  margin-right: 1%;
+}
+
+.rightPart {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.searchIcons {
+  margin-left: 3%;
+  margin-right: 3%;
+}
