@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 const SearchBar = props => {
   return (
-    <div className="searchBarContainer">
+    <nav className="searchBarContainer">
       <div className="leftPart">
         <img
           className="searchIcons"
@@ -57,7 +57,7 @@ const SearchBar = props => {
           alt="contacts icon"
         />
       </div>
-    </div>
+    </nav>
   );
 };
 

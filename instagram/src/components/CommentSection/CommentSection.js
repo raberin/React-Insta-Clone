@@ -8,7 +8,7 @@ const CommentSection = props => {
         return (
           <div className="comment">
             <p>
-              <strong>{comment.username}</strong> - {comment.text}
+              <strong>{comment.username}</strong> {comment.text}
             </p>
           </div>
         );
