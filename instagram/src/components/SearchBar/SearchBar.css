@@ -6,7 +6,7 @@
 }
 
 .leftPart {
-  width: 40%;
+  width: 30%;
   display: flex;
   flex-direction: row;
 }
@@ -19,7 +19,7 @@
 }
 
 .centerPart {
-  width: 20%;
+  width: 25%;
   display: flex;
   align-items: center;
 }
@@ -47,7 +47,7 @@
 .rightPart {
   display: flex;
   justify-content: flex-end;
-  width: 40%;
+  width: 30%;
 }
 
 .searchIcons {

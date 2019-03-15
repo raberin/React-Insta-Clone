@@ -1,0 +1,73 @@
+.post-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.picAndUsername {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+  margin: 2% 1.5%;
+}
+
+.profilePic {
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.igPost {
+  width: 100%;
+}
+
+.commentIcons {
+  margin: 1% 1.5%;
+}
+
+.like {
+  margin-left: 1.5%;
+}
+
+.timeStamp {
+  font-size: 1rem;
+  margin-left: 1.5%;
+  color: gray;
+  font-weight: bold;
+}
+
+.addCommentSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.2rem;
+}
+
+.borderTop {
+  display: flex;
+  align-self: center;
+  border-top: solid 1px silver;
+  width: 97%;
+  text-align: center;
+}
+
+.addCommentDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.addCommentInput {
+  width: 95%;
+  margin-left: 1.5%;
+}
+
+.threeDotsIcon {
+  width: 5%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5%;
+}

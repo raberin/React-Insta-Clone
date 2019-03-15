@@ -14,9 +14,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App container">
-        <SearchBar />
-        <PostContainer dummyData={this.state.dummyData} />
+      <div className="App">
+        <div className="container">
+          <SearchBar />
+          <PostContainer dummyData={this.state.dummyData} />
+        </div>
       </div>
     );
   }

@@ -6,11 +6,19 @@ import CommentSection from "../CommentSection/CommentSection";
 const PostContainer = props => {
   return props.dummyData.map(post => (
     <div className="post-container">
-      <div className="logoAndUsername">
-        <h2>{post.username}</h2>
-        <img src={post.thumbnailUrl} alt="profile" />
+      <div className="picAndUsername">
+        <img
+          className="profilePic"
+          src={post.thumbnailUrl}
+          alt="profile"
+          height="29px"
+          width="29px"
+        />
+        <h2>
+          <strong>{post.username}</strong>
+        </h2>
       </div>
-      <img src={post.imageUrl} alt="instagram post" />
+      <img className="igPost" src={post.imageUrl} alt="instagram post" />
       <div className="comment-icons">
         <img
           className="commentIcons"
@@ -27,12 +35,29 @@ const PostContainer = props => {
           alt="comment icons"
         />
       </div>
-      <p>
-        <strong>{post.likes}</strong> likes
+      <p className="like">
+        <strong>{post.likes} likes</strong>
       </p>
       <CommentSection dummyDataComments={post.comments} />
-      <p>{post.timestamp}</p>
-      <input type="text" placeholder="Add a comment..." />
+      <p className="timeStamp">{post.timestamp}</p>
+      <div className="addCommentSection">
+        <div className="borderTop" />
+        <div className="addCommentDiv">
+          <input
+            className="addCommentInput"
+            type="text"
+            placeholder="Add a comment..."
+          />
+          <div className="threeDotsIcon">
+            <img
+              alt="three dots"
+              src="https://img.icons8.com/windows/32/000000/more.png"
+              height="29px"
+              width="29px"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   ));
 };
