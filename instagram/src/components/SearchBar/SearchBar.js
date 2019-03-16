@@ -8,15 +8,15 @@ const SearchBar = props => {
         <img
           className="searchIcons"
           src="https://img.icons8.com/windows/32/000000/instagram-new.png"
-          height="29px"
-          width="29px"
+          height="35px"
+          width="35px"
           alt="instagram logo"
         />
         <div className="dash" />
         <img
           src="https://soundwave.co.uk/cms/resources/blog/top-tips-on-maximising-your-instagram-obsession-ndash-and-making-it-work-for-your-business-430.jpg"
-          height="35px"
-          width="103px"
+          height="40px"
+          width="120px"
           alt="instagram"
         />
       </div>
@@ -38,22 +38,22 @@ const SearchBar = props => {
         <img
           className="searchIcons"
           src="https://img.icons8.com/windows/32/000000/compass.png"
-          height="29px"
-          width="29px"
+          height="35px"
+          width="35px"
           alt="compass icon"
         />
         <img
           className="searchIcons"
           src="https://img.icons8.com/windows/32/000000/hearts.png"
-          height="29px"
-          width="29px"
+          height="35px"
+          width="35px"
           alt="heart icon"
         />
         <img
           className="searchIcons"
           src="https://img.icons8.com/windows/32/000000/contacts.png"
-          height="29px"
-          width="29px"
+          height="35px"
+          width="35px"
           alt="contacts icon"
         />
       </div>

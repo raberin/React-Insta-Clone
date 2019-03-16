@@ -31,7 +31,7 @@
 }
 
 .timeStamp {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-left: 1.5%;
   color: gray;
   font-weight: bold;
@@ -63,6 +63,8 @@
 .addCommentInput {
   width: 95%;
   margin-left: 1.5%;
+  height: 3rem;
+  font-size: 1.6rem;
 }
 
 .threeDotsIcon {

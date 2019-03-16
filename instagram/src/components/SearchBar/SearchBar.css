@@ -9,6 +9,8 @@
   width: 30%;
   display: flex;
   flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
 
 .dash {
@@ -48,6 +50,8 @@
   display: flex;
   justify-content: flex-end;
   width: 30%;
+  align-content: center;
+  align-items: center;
 }
 
 .searchIcons {
