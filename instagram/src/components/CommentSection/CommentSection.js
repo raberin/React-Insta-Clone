@@ -2,24 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./CommentSection.css";
 
+import Comment from "./Comment";
+
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.dummyDataComments
+      comments: props.comments
     };
   }
 
   render() {
     return (
       <div className="comment-container">
-        {this.state.comments.map(comment => {
+        {this.state.comments.map((comment, index) => {
           return (
-            <div className="comment">
-              <p>
-                <strong>{comment.username}</strong> {comment.text}
-              </p>
-            </div>
+            <Comment
+              key={index}
+              username={comment.username}
+              text={comment.text}
+            />
           );
         })}
       </div>
