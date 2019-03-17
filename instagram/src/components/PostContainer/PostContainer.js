@@ -12,8 +12,8 @@ const PostContainer = props => {
           className="profilePic"
           src={post.thumbnailUrl}
           alt="profile"
-          height="32px"
-          width="32px"
+          height="35px"
+          width="35px"
         />
         <h2>
           <strong>{post.username}</strong>
@@ -24,15 +24,15 @@ const PostContainer = props => {
         <img
           className="commentIcons"
           src="https://img.icons8.com/windows/32/000000/hearts.png"
-          height="32px"
-          width="32px"
+          height="35px"
+          width="35px"
           alt="heart icon"
         />
         <img
           className="commentIcons"
           src="https://img.icons8.com/windows/32/000000/speech-bubble.png"
-          height="32px"
-          width="32px"
+          height="35px"
+          width="35px"
           alt="comment icons"
         />
       </div>
@@ -53,8 +53,8 @@ const PostContainer = props => {
             <img
               alt="three dots"
               src="https://img.icons8.com/windows/32/000000/more.png"
-              height="32px"
-              width="32px"
+              height="35px"
+              width="35px"
             />
           </div>
         </div>
