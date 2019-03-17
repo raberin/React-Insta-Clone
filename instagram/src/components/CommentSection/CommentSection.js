@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import "./CommentSection.css";
 
 import Comment from "./Comment";
+import CommentInput from "./CommentInput";
 
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: props.comments
+      comments: props.comments,
+      timestamp: props.timestamp
     };
   }
 
@@ -24,6 +26,8 @@ class CommentSection extends React.Component {
             />
           );
         })}
+        <p className="timeStamp">{this.state.timestamp}</p>
+        <CommentInput />
       </div>
     );
   }
