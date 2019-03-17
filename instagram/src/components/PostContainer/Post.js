@@ -40,7 +40,6 @@ const Post = props => {
         comments={props.post.comments}
         timestamp={props.post.timestamp}
       />
-      <p className="timeStamp">{props.post.timestamp}</p>
     </div>
   );
 };
