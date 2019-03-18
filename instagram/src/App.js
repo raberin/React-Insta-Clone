@@ -15,12 +15,16 @@ class App extends Component {
   componentDidMount() {
     this.setState({ dummyData: data });
   }
+
   render() {
     return (
       <div className="App">
         <div className="container">
           <SearchBar />
-          <PostContainer dummyData={this.state.dummyData} />
+          <PostContainer
+            dummyData={this.state.dummyData}
+            addLikeChangeHandler={this.addLikeChangeHandler}
+          />
         </div>
       </div>
     );

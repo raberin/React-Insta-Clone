@@ -9,6 +9,7 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      likes: props.likes,
       comments: props.comments,
       timestamp: props.timestamp,
       comment: ""
@@ -16,33 +17,34 @@ class CommentSection extends React.Component {
   }
   //addNewComment method 1 (TodoList method)
   //Utilizes the spread operator and adds the comment to end of array
-  addNewComment = event => {
-    event.preventDefault();
-    let newComment = {
-      username: "raberin",
-      text: this.state.comment
-    };
-    this.setState({
-      comments: [...this.state.comments, newComment],
-      comment: ""
-    });
-    event.target.reset();
-  };
-  //addNewComment method 2 pushes the newComment into end of array
   // addNewComment = event => {
   //   event.preventDefault();
   //   let newComment = {
   //     username: "raberin",
   //     text: this.state.comment
   //   };
-  //   let comments = this.state.comments;
-  //   comments.push(newComment);
   //   this.setState({
-  //     comments: comments,
+  //     comments: [...this.state.comments, newComment],
   //     comment: ""
   //   });
   //   event.target.reset();
   // };
+
+  //addNewComment method 2 pushes the newComment into end of array
+  addNewComment = event => {
+    event.preventDefault();
+    let newComment = {
+      username: "raberin",
+      text: this.state.comment
+    };
+    let comments = this.state.comments;
+    comments.push(newComment);
+    this.setState({
+      comments: comments,
+      comment: ""
+    });
+    event.target.reset();
+  };
 
   inputChangeHandler = event => {
     this.setState({ comment: event.target.value });
@@ -51,6 +53,28 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-container">
+        <div className="comment-icons">
+          <img
+            className="commentIcons toggleLike"
+            src="https://img.icons8.com/windows/32/000000/hearts.png"
+            height="35px"
+            width="35px"
+            alt="heart icon"
+            // onClick={}
+          />
+          <img
+            className="commentIcons"
+            src="https://img.icons8.com/windows/32/000000/speech-bubble.png"
+            height="35px"
+            width="35px"
+            alt="comment icons"
+          />
+        </div>
+        <div>
+          <p className="like">
+            <strong>{this.state.likes} likes</strong>
+          </p>
+        </div>
         {this.state.comments.map((comment, index) => {
           return (
             <Comment
@@ -64,7 +88,6 @@ class CommentSection extends React.Component {
         <CommentInput
           addNewComment={this.addNewComment}
           inputChangeHandler={this.inputChangeHandler}
-          value={this.state.comment}
         />
       </div>
     );

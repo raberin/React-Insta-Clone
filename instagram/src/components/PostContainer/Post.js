@@ -17,28 +17,11 @@ const Post = props => {
         src={props.post.imageUrl}
         alt="instagram post"
       />
-      <div className="comment-icons">
-        <img
-          className="commentIcons"
-          src="https://img.icons8.com/windows/32/000000/hearts.png"
-          height="35px"
-          width="35px"
-          alt="heart icon"
-        />
-        <img
-          className="commentIcons"
-          src="https://img.icons8.com/windows/32/000000/speech-bubble.png"
-          height="35px"
-          width="35px"
-          alt="comment icons"
-        />
-      </div>
-      <p className="like">
-        <strong>{props.post.likes} likes</strong>
-      </p>
+
       <CommentSection
         comments={props.post.comments}
         timestamp={props.post.timestamp}
+        likes={props.post.likes}
       />
     </div>
   );
