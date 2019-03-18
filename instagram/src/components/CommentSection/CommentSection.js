@@ -10,9 +10,43 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
-      timestamp: props.timestamp
+      timestamp: props.timestamp,
+      comment: ""
     };
   }
+  //addNewComment method 1 (TodoList method)
+  //Utilizes the spread operator and adds the comment to end of array
+  addNewComment = event => {
+    event.preventDefault();
+    let newComment = {
+      username: "raberin",
+      text: this.state.comment
+    };
+    this.setState({
+      comments: [...this.state.comments, newComment],
+      comment: ""
+    });
+    event.target.reset();
+  };
+  //addNewComment method 2 pushes the newComment into end of array
+  // addNewComment = event => {
+  //   event.preventDefault();
+  //   let newComment = {
+  //     username: "raberin",
+  //     text: this.state.comment
+  //   };
+  //   let comments = this.state.comments;
+  //   comments.push(newComment);
+  //   this.setState({
+  //     comments: comments,
+  //     comment: ""
+  //   });
+  //   event.target.reset();
+  // };
+
+  inputChangeHandler = event => {
+    this.setState({ comment: event.target.value });
+  };
 
   render() {
     return (
@@ -27,7 +61,11 @@ class CommentSection extends React.Component {
           );
         })}
         <p className="timeStamp">{this.state.timestamp}</p>
-        <CommentInput />
+        <CommentInput
+          addNewComment={this.addNewComment}
+          inputChangeHandler={this.inputChangeHandler}
+          value={this.state.comment}
+        />
       </div>
     );
   }

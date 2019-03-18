@@ -6,11 +6,14 @@ const CommentInput = props => {
     <div className="addCommentSection">
       <div className="borderTop" />
       <div className="addCommentDiv">
-        <form>
+        <form onSubmit={props.addNewComment}>
           <input
             className="addCommentInput"
             type="text"
             placeholder="Add a comment..."
+            name="Input Field"
+            onChange={props.inputChangeHandler}
+            value={props.value}
           />
         </form>
 
