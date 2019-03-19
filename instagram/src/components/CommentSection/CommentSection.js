@@ -50,6 +50,17 @@ class CommentSection extends React.Component {
     this.setState({ comment: event.target.value });
   };
 
+  addLikeHandler = () => {
+    this.setState(prevState => {
+      if (prevState.liked === undefined || prevState.liked === false) {
+        console.log("you clicked me");
+        return { likes: prevState.likes + 1, liked: true };
+      } else {
+        return { likes: prevState.likes - 1, liked: !prevState.liked };
+      }
+    });
+  };
+
   render() {
     return (
       <div className="comment-container">
@@ -60,7 +71,7 @@ class CommentSection extends React.Component {
             height="35px"
             width="35px"
             alt="heart icon"
-            // onClick={}
+            onClick={this.addLikeHandler}
           />
           <img
             className="commentIcons"
