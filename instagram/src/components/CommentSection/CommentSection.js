@@ -66,8 +66,24 @@ class CommentSection extends React.Component {
       <div className="comment-container">
         <div className="comment-icons">
           <img
-            className="commentIcons toggleLike"
+            className={
+              this.state.liked
+                ? "display-none comment-icons"
+                : "display-show comment-icons"
+            }
             src="https://img.icons8.com/windows/32/000000/hearts.png"
+            height="35px"
+            width="35px"
+            alt="heart icon"
+            onClick={this.addLikeHandler}
+          />
+          <img
+            className={
+              this.state.liked
+                ? "display-show comment-icons"
+                : "display-none comment-icons"
+            }
+            src="https://img.icons8.com/color/30/000000/hearts.png"
             height="35px"
             width="35px"
             alt="heart icon"
