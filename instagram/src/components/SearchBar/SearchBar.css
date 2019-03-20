@@ -58,3 +58,25 @@
   margin-left: 3%;
   margin-right: 3%;
 }
+
+.display-none {
+  display: none;
+}
+
+.display-show {
+  display: inline-block;
+}
+
+.searchBarInput {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.searchBarInputField {
+  border: solid 1px silver;
+  width: 18rem;
+  border-radius: 3px;
+  height: 2rem;
+}

@@ -4,6 +4,7 @@ import "./CommentSection.css";
 
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
+import LikeComponent from "./LikeComponent";
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class CommentSection extends React.Component {
       likes: props.likes,
       comments: props.comments,
       timestamp: props.timestamp,
-      comment: ""
+      comment: "",
+      liked: false
     };
   }
   //addNewComment method 1 (TodoList method)
@@ -52,7 +54,7 @@ class CommentSection extends React.Component {
 
   addLikeHandler = () => {
     this.setState(prevState => {
-      if (prevState.liked === undefined || prevState.liked === false) {
+      if (prevState.liked === false) {
         console.log("you clicked me");
         return { likes: prevState.likes + 1, liked: true };
       } else {
@@ -64,44 +66,11 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div className="comment-container">
-        <div className="comment-icons">
-          <img
-            className={
-              this.state.liked
-                ? "display-none comment-icons"
-                : "display-show comment-icons"
-            }
-            src="https://img.icons8.com/windows/32/000000/hearts.png"
-            height="35px"
-            width="35px"
-            alt="heart icon"
-            onClick={this.addLikeHandler}
-          />
-          <img
-            className={
-              this.state.liked
-                ? "display-show comment-icons"
-                : "display-none comment-icons"
-            }
-            src="https://img.icons8.com/color/30/000000/hearts.png"
-            height="35px"
-            width="35px"
-            alt="heart icon"
-            onClick={this.addLikeHandler}
-          />
-          <img
-            className="commentIcons"
-            src="https://img.icons8.com/windows/32/000000/speech-bubble.png"
-            height="35px"
-            width="35px"
-            alt="comment icons"
-          />
-        </div>
-        <div>
-          <p className="like">
-            <strong>{this.state.likes} likes</strong>
-          </p>
-        </div>
+        <LikeComponent
+          addLikeHandler={this.addLikeHandler}
+          likes={this.state.likes}
+          liked={this.state.liked}
+        />
         {this.state.comments.map((comment, index) => {
           return (
             <Comment
