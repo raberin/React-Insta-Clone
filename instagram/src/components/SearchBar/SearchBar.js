@@ -50,6 +50,7 @@ const SearchBar = props => {
             className="searchBarInputField"
             type="text"
             name="search field"
+            onChange={props.searchBarFilter}
           />
           <p onClick={props.searchBarCssHandler}> x</p>
         </form>

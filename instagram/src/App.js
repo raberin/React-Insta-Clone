@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       dummyData: [],
+      filteredPost: [],
       searchBarClicked: false
     };
   }
@@ -28,6 +29,19 @@ class App extends Component {
     });
   };
 
+  searchBarFilter = event => {
+    //Create a variable which filters the data and returns an
+    //array with the filtered post
+    let posts = this.state.dummyData.filter(post => {
+      if (post.username.includes(event.target.value)) {
+        return post;
+      }
+    });
+    //Changes the state of filteredPost to the value created
+    //from filter function
+    return this.setState({ filteredPost: posts });
+  };
+
   render() {
     return (
       <div className="App">
@@ -35,9 +49,16 @@ class App extends Component {
           <SearchBar
             searchBarCssHandler={this.searchBarCssHandler}
             searchBarClicked={this.state.searchBarClicked}
+            searchBarFilter={this.searchBarFilter}
           />
           <PostContainer
-            dummyData={this.state.dummyData}
+            // If the filteredPost length is greater than 0
+            //Use filteredPost arr over dummyData arr
+            dummyData={
+              this.state.filteredPost.length > 0
+                ? this.state.filteredPost
+                : this.state.dummyData
+            }
             addLikeChangeHandler={this.addLikeChangeHandler}
           />
         </div>
