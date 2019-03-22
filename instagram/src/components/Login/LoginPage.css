@@ -1,0 +1,28 @@
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.login-title {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+}
+
+.login-input {
+  height: 3.4rem;
+  width: 20rem;
+  font-family: "Quicksand", "Anton", sans-serif;
+}
+
+.login-button {
+  border: solid 1px slategray;
+  text-decoration: none;
+  background-color: whitesmoke;
+  margin-top: 4rem;
+  width: 10rem;
+  height: 3.4rem;
+}

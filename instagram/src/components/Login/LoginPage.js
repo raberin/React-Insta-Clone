@@ -25,9 +25,9 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div className="login-page">
+      <div className="login-page container">
         <form className="login-form" onSubmit={this.login}>
-          Username:
+          <h1 className="login-title">Flexgram</h1>
           <input
             className="login-input"
             type="text"
@@ -35,7 +35,6 @@ class LoginPage extends React.Component {
             name="username"
             onChange={this.inputChangeHandler}
           />
-          Password:
           <input
             className="login-input"
             type="text"
@@ -43,7 +42,9 @@ class LoginPage extends React.Component {
             name="password"
             onChange={this.inputChangeHandler}
           />
-          <button type="submit">Login</button>
+          <button className="login-button" type="submit">
+            Login
+          </button>
         </form>
       </div>
     );
