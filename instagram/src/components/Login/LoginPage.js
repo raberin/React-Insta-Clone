@@ -1,11 +1,11 @@
 import React from "react";
 
-class Login extends React.Component {
+class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: "",
-      loggedIn: false
+      password: ""
     };
   }
 
@@ -17,7 +17,7 @@ class Login extends React.Component {
 
   login = () => {
     //Sets the username on localStorage to whatever was submitted on the form
-    localStorage.setItem("username", JSON.stringify(this.state.username));
+    localStorage.setItem("username", this.state.username);
   };
 
   render() {
@@ -38,6 +38,7 @@ class Login extends React.Component {
             type="text"
             placeholder="Password"
             name="password"
+            onChange={this.inputChangeHandler}
           />
           <button type="submit">Login</button>
         </form>
@@ -46,4 +47,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default LoginPage;
