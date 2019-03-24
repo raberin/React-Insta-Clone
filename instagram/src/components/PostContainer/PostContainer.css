@@ -1,0 +1,23 @@
+.post-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.picAndUsername {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+  margin: 2% 1.5%;
+}
+
+.profilePic {
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.igPost {
+  width: 100%;
+}

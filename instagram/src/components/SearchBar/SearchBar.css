@@ -1,0 +1,82 @@
+.searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  justify-content: space-between;
+}
+
+.leftPart {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.dash {
+  background-color: #262626;
+  height: 26px;
+  margin: 0 16px;
+  width: 1px;
+}
+
+.centerPart {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  outline: 0;
+  padding: 3px 10px 3px 10px;
+  font-size: 1.4rem;
+  height: 2.4rem;
+  width: 100%;
+}
+
+.magnifyGlass {
+  margin-right: 1%;
+}
+
+.rightPart {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  align-content: center;
+  align-items: center;
+}
+
+.searchIcons {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-show {
+  display: inline-block;
+}
+
+.searchBarInput {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.searchBarInputField {
+  border: solid 1px silver;
+  width: 18rem;
+  border-radius: 3px;
+  height: 2rem;
+}
