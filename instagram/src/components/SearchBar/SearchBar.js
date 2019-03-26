@@ -1,10 +1,40 @@
 import React from "react";
 import "./SearchBar.css";
+import styled from "styled-components";
+
+export const Header = styled.header`
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  justify-content: space-between;
+`;
+
+export const LogoHeader = styled.div`
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+`;
+
+export const SearchBarDivCenter = styled.div`
+  width: 25%;
+  display: flex;
+  align-items: center;
+`;
+
+export const SearchBarDivRight = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  align-content: center;
+  align-items: center;
+`;
 
 const SearchBar = props => {
   return (
-    <nav className="searchBarContainer">
-      <div className="leftPart">
+    <Header>
+      <LogoHeader>
         <img
           className="searchIcons"
           src="https://img.icons8.com/windows/32/000000/instagram-new.png"
@@ -19,9 +49,9 @@ const SearchBar = props => {
           width="120px"
           alt="instagram"
         />
-      </div>
+      </LogoHeader>
 
-      <div className="centerPart">
+      <SearchBarDivCenter>
         <form>
           <input
             className="searchBarInputField"
@@ -31,9 +61,9 @@ const SearchBar = props => {
             onChange={props.searchBarFilter}
           />
         </form>
-      </div>
+      </SearchBarDivCenter>
 
-      <div className="rightPart">
+      <SearchBarDivRight>
         <img
           className="searchIcons"
           src="https://img.icons8.com/windows/32/000000/compass.png"
@@ -55,8 +85,8 @@ const SearchBar = props => {
           width="35px"
           alt="contacts icon"
         />
-      </div>
-    </nav>
+      </SearchBarDivRight>
+    </Header>
   );
 };
 

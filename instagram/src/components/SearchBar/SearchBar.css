@@ -1,18 +1,3 @@
-.searchBarContainer {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1%;
-  justify-content: space-between;
-}
-
-.leftPart {
-  width: 30%;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-}
-
 .dash {
   background-color: #262626;
   height: 26px;
@@ -44,14 +29,6 @@
 
 .magnifyGlass {
   margin-right: 1%;
-}
-
-.rightPart {
-  display: flex;
-  justify-content: flex-end;
-  width: 30%;
-  align-content: center;
-  align-items: center;
 }
 
 .searchIcons {
