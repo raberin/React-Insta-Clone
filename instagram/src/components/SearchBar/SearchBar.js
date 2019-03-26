@@ -22,37 +22,14 @@ const SearchBar = props => {
       </div>
 
       <div className="centerPart">
-        <div
-          className={
-            props.searchBarClicked
-              ? "display-none searchBar"
-              : "display-show searchBar"
-          }
-          onClick={props.searchBarCssHandler}
-        >
-          <img
-            className="magnifyGlass"
-            src="https://img.icons8.com/ios/32/000000/search-filled.png"
-            height="10px"
-            width="10px"
-            alt="magnify glass"
-          />
-          Search
-        </div>
-        <form
-          className={
-            props.searchBarClicked
-              ? "display-show searchBarInput"
-              : "display-none"
-          }
-        >
+        <form>
           <input
             className="searchBarInputField"
             type="text"
             name="search field"
+            placeholder="Search"
             onChange={props.searchBarFilter}
           />
-          <p onClick={props.searchBarCssHandler}> x</p>
         </form>
       </div>
 
